@@ -8,18 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		71E084032A7D2BB000A8B0D8 /* RetryTCAApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E084022A7D2BB000A8B0D8 /* RetryTCAApp.swift */; };
-		71E084052A7D2BB000A8B0D8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E084042A7D2BB000A8B0D8 /* ContentView.swift */; };
+		71E084052A7D2BB000A8B0D8 /* DownloadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E084042A7D2BB000A8B0D8 /* DownloadView.swift */; };
 		71E084072A7D2BB100A8B0D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71E084062A7D2BB100A8B0D8 /* Assets.xcassets */; };
 		71E0840B2A7D2BB100A8B0D8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71E0840A2A7D2BB100A8B0D8 /* Preview Assets.xcassets */; };
+		71E084132A7D2C4F00A8B0D8 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 71E084122A7D2C4F00A8B0D8 /* ComposableArchitecture */; };
+		71E084152A7D2F0300A8B0D8 /* DownloadFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E084142A7D2F0300A8B0D8 /* DownloadFeature.swift */; };
+		71E084192A7D687100A8B0D8 /* RetryFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E084182A7D687100A8B0D8 /* RetryFeature.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		71E083FF2A7D2BB000A8B0D8 /* RetryTCA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetryTCA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71E084022A7D2BB000A8B0D8 /* RetryTCAApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetryTCAApp.swift; sourceTree = "<group>"; };
-		71E084042A7D2BB000A8B0D8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		71E084042A7D2BB000A8B0D8 /* DownloadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadView.swift; sourceTree = "<group>"; };
 		71E084062A7D2BB100A8B0D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		71E084082A7D2BB100A8B0D8 /* RetryTCA.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RetryTCA.entitlements; sourceTree = "<group>"; };
 		71E0840A2A7D2BB100A8B0D8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		71E084142A7D2F0300A8B0D8 /* DownloadFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadFeature.swift; sourceTree = "<group>"; };
+		71E084182A7D687100A8B0D8 /* RetryFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetryFeature.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71E084132A7D2C4F00A8B0D8 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,8 +58,9 @@
 		71E084012A7D2BB000A8B0D8 /* RetryTCA */ = {
 			isa = PBXGroup;
 			children = (
+				71E084172A7D307100A8B0D8 /* Retry */,
+				71E084162A7D306500A8B0D8 /* Download */,
 				71E084022A7D2BB000A8B0D8 /* RetryTCAApp.swift */,
-				71E084042A7D2BB000A8B0D8 /* ContentView.swift */,
 				71E084062A7D2BB100A8B0D8 /* Assets.xcassets */,
 				71E084082A7D2BB100A8B0D8 /* RetryTCA.entitlements */,
 				71E084092A7D2BB100A8B0D8 /* Preview Content */,
@@ -67,6 +74,23 @@
 				71E0840A2A7D2BB100A8B0D8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		71E084162A7D306500A8B0D8 /* Download */ = {
+			isa = PBXGroup;
+			children = (
+				71E084042A7D2BB000A8B0D8 /* DownloadView.swift */,
+				71E084142A7D2F0300A8B0D8 /* DownloadFeature.swift */,
+			);
+			path = Download;
+			sourceTree = "<group>";
+		};
+		71E084172A7D307100A8B0D8 /* Retry */ = {
+			isa = PBXGroup;
+			children = (
+				71E084182A7D687100A8B0D8 /* RetryFeature.swift */,
+			);
+			path = Retry;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +109,9 @@
 			dependencies = (
 			);
 			name = RetryTCA;
+			packageProductDependencies = (
+				71E084122A7D2C4F00A8B0D8 /* ComposableArchitecture */,
+			);
 			productName = RetryTCA;
 			productReference = 71E083FF2A7D2BB000A8B0D8 /* RetryTCA.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +140,9 @@
 				Base,
 			);
 			mainGroup = 71E083F62A7D2BB000A8B0D8;
+			packageReferences = (
+				71E084112A7D2C4F00A8B0D8 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = 71E084002A7D2BB000A8B0D8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,8 +169,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71E084052A7D2BB000A8B0D8 /* ContentView.swift in Sources */,
+				71E084052A7D2BB000A8B0D8 /* DownloadView.swift in Sources */,
+				71E084152A7D2F0300A8B0D8 /* DownloadFeature.swift in Sources */,
 				71E084032A7D2BB000A8B0D8 /* RetryTCAApp.swift in Sources */,
+				71E084192A7D687100A8B0D8 /* RetryFeature.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,6 +386,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		71E084112A7D2C4F00A8B0D8 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		71E084122A7D2C4F00A8B0D8 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 71E084112A7D2C4F00A8B0D8 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 71E083F72A7D2BB000A8B0D8 /* Project object */;
 }

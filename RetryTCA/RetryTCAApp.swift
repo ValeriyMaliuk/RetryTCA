@@ -6,12 +6,16 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 @main
 struct RetryTCAApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            DownloadView(store: Store(initialState: .init(), reducer: {
+                DownloadFeature()
+                    ._printChanges()
+            }))
         }
     }
 }
